@@ -1,0 +1,44 @@
+﻿<Window x:Class="Ticketsystem_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ticketsystem_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+
+        <!-- Buttons links -->
+        <Button x:Name="NeuButton" Content="Neu"
+                HorizontalAlignment="Left" Margin="10,20,0,0"
+                VerticalAlignment="Top" Height="46" Width="208" Click="NeuButton_Click"/>
+
+        <Button x:Name="EditButton" Content="Bearbeiten"
+                HorizontalAlignment="Left" Margin="10,91,0,0"
+                VerticalAlignment="Top" Height="46" Width="208" Click="EditButton_Click" IsEnabled="False"/>
+
+        <Button x:Name="DeleteButton" Content="Löschen"
+                HorizontalAlignment="Left" Margin="10,161,0,0"
+                VerticalAlignment="Top" Height="46" Width="208" Click="DeleteButton_Click" IsEnabled="False"/>
+
+
+        <!-- LISTBOX rechts -->
+        <ListBox x:Name="TicketListe"
+                 Margin="239,79,10,10"
+                 MinWidth="500" SelectionChanged="TicketListe_SelectionChanged">
+
+
+
+
+        </ListBox>
+        <Label Content="Nach Ticket-ID Suchen:" HorizontalAlignment="Left" Margin="234,28,0,0" VerticalAlignment="Top" Height="46" Width="138"/>
+        <TextBox x:Name="SearchTextBox" HorizontalAlignment="Left" Margin="372,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" Height="30"/>
+        <Button x:Name="SearchButton" Content="Suchen" Margin="580,28,140,0" VerticalAlignment="Top" Click="Button_Click" Height="30"/>
+        <Button x:Name="ResetSucheButton" Content="Reset Suche" HorizontalAlignment="Left" Margin="674,28,0,0" VerticalAlignment="Top" Height="30" Width="84" Click="Button_Click_1"/>
+        <Button x:Name="Aktualisier" Content="Alle Tickets Aktualisieren&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,330,0,0" VerticalAlignment="Top" Height="46" Width="208" Click="Aktualisier_Click"/>
+        <Button x:Name="DBSpeichern" Content="DB" HorizontalAlignment="Left" Margin="10,263,0,0" VerticalAlignment="Top" Height="37" Width="68" Click="Button_Click_2"/>
+        <Button x:Name="CSVSpeichern" Content="CSV" HorizontalAlignment="Left" Margin="150,263,0,0" VerticalAlignment="Top" Height="37" Width="68" Click="CSVSpeichern_Click"/>
+
+    </Grid>
+</Window>
