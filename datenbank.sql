@@ -1,5 +1,5 @@
 -- Legt die Datenbank für das Ticketsystem an.
--- Einmal ausführen, z. B. in phpMyAdmin, MySQL Workbench oder mit: mysql -u root < datenbank.sql
+-- Einmal ausführen, z. B. in phpMyAdmin, MySQL Workbench oder mit: mysql -u root -e "source datenbank.sql"
 
 CREATE DATABASE IF NOT EXISTS ticketsystem DEFAULT CHARACTER SET utf8mb4;
 USE ticketsystem;
